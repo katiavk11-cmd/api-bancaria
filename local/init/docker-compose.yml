@@ -1,0 +1,17 @@
+services:
+  postgres:
+    image: postgres:16.4
+    container_name: api_bancaria_db
+    restart: unless-stopped
+    environment:
+      - POSTGRES_DB=api_bancaria
+      - POSTGRES_USER=katia
+      - POSTGRES_PASSWORD=123456
+    ports:
+      - "5433:5432"  # Mudamos a porta de saída para 5433
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./bancada.sql:/docker-entrypoint-initdb.d/bancada.sql
+
+volumes:
+  postgres_data:
