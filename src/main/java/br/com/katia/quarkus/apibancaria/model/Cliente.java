@@ -14,7 +14,7 @@ public class Cliente extends PanacheEntityBase {
     @Column(nullable = false)
     private String nome;
 
-    @Column(unique = true, nullable = false)
+    @Column(unique = true, nullable = false, updatable = false)
     private String cpf;
 
     @Column(unique = true, nullable = false)
