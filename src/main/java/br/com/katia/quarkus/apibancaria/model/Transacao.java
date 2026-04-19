@@ -17,7 +17,7 @@ public class Transacao extends PanacheEntityBase {
     private String tipo;
 
     @Column(nullable = false, precision = 15, scale = 2)
-    private BigDecimal valor; // Aceitará negativos sem problemas
+    private BigDecimal valor;
 
     @Column(name = "data_hora", nullable = false)
     private LocalDateTime dataHora = LocalDateTime.now();

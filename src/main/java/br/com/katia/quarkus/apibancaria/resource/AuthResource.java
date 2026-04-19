@@ -5,7 +5,10 @@ import br.com.katia.quarkus.apibancaria.dto.TokenResponse;
 import br.com.katia.quarkus.apibancaria.service.AuthService;
 import jakarta.annotation.security.PermitAll;
 import jakarta.inject.Inject;
-import jakarta.ws.rs.*;
+import jakarta.ws.rs.Consumes;
+import jakarta.ws.rs.POST;
+import jakarta.ws.rs.Path;
+import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 
 @Path("/auth")
@@ -20,7 +23,6 @@ public class AuthResource {
     @POST
     @Path("/login")
     public TokenResponse login(AuthRequest auth) {
-        // Agora delegamos a lógica para o Service, igual no projeto da Ada
-        return authService.login(auth.email, auth.senha);
+       return authService.login(auth.email, auth.senha);
     }
 }

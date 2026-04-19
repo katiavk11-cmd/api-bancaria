@@ -6,7 +6,7 @@ import org.hibernate.annotations.Immutable;
 import java.math.BigDecimal;
 
 @Entity
-@Immutable // Indica que o Java não pode deletar ou editar dados aqui, apenas ler
+@Immutable
 @Table(name = "view_saldo")
 public class ViewSaldo extends PanacheEntityBase {
 
