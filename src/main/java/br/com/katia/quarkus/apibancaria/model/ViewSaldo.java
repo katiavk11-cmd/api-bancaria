@@ -1,28 +1,29 @@
 package br.com.katia.quarkus.apibancaria.model;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import org.hibernate.annotations.Immutable;
-import java.math.BigDecimal;
+import org.hibernate.annotations.Subselect;
 
 @Entity
 @Immutable
-@Table(name = "view_saldo")
+@Subselect("""
+    SELECT 
+        co.id as id, 
+        co.cliente_id as clienteId, 
+        co.numero as numero, 
+        co.tipo as tipo,
+        (SELECT COALESCE(SUM(t.valor), 0) FROM transacao t WHERE t.conta_destino_id = co.id) - 
+        (SELECT COALESCE(SUM(t.valor), 0) FROM transacao t WHERE t.conta_origem_id = co.id) as saldo
+    FROM conta co
+    """)
 public class ViewSaldo extends PanacheEntityBase {
-
     @Id
     public Long id;
+    public Long clienteId;
     public String numero;
     public String tipo;
-    public BigDecimal saldo;
-
-    // Getters e Setters
-    public Long getId() { return id; }
-    public void setId(Long id) { this.id = id; }
-    public String getNumero() { return numero; }
-    public void setNumero(String numero) { this.numero = numero; }
-    public String getTipo() { return tipo; }
-    public void setTipo(String tipo) { this.tipo = tipo; }
-    public BigDecimal getSaldo() { return saldo; }
-    public void setSaldo(BigDecimal saldo) { this.saldo = saldo; }
+    public Double saldo;
 }

@@ -19,22 +19,25 @@ public class Cliente extends PanacheEntityBase {
     public Long id;
 
     @Column(nullable = false)
-    private String nome;
+    public String nome;
 
     @Column(unique = true, nullable = false, updatable = false)
-    private String cpf;
+    public String cpf;
 
     @Column(unique = true, nullable = false)
-    private String email;
+    public String email;
 
-    @Column(nullable = false)
-    private String senha;
+    @Column(nullable = false, length = 512)
+    public String senha;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private UserRole role;
+    public UserRole role;
 
-    // Getters e Setters
+
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+
     public String getNome() { return nome; }
     public void setNome(String nome) { this.nome = nome; }
 
