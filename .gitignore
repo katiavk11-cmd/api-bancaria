@@ -37,3 +37,8 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+# Banco local (H2 / arquivos gerados)
+dados/
+*.db
+*.trace.db

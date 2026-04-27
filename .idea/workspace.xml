@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2a0919c0-974b-4d19-b151-1121cdaf49dc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bancada.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dados/api_bancaria.mv.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dados/api_bancaria.trace.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/BcryptGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/dto/ContaDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/dto/ContaResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/dto/ErrorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/dto/OperacaoDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/dto/SaldoResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/dto/TransacaoResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/dto/TransferenciaDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/dto/ValorDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/dto/ValorRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/entity/Cliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/entity/Conta.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/entity/Transacao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/repository/ClienteRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/repository/ContaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/repository/TransacaoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/resource/DebugResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/resource/ExtratoResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/resource/HashGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/resource/OperacaoResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/resource/SaqueResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/resource/TesteResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/security/AccountSecurity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/security/JwtFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/security/JwtService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/security/SecurityContextUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/service/ContaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/service/ExtratoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/service/TransacaoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/QuarkusDeploymentProjectService.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/QuarkusDeploymentProjectService.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/init/bancada.sql" beforeDir="false" afterPath="$PROJECT_DIR$/local/init/bancada.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/init/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/dto/AuthRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/dto/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/dto/LoginRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/dto/TokenResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/dto/TokenResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/model/Cliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/model/Conta.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/model/TipoConta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/entity/TipoConta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/model/TipoTransacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/entity/TipoTransacao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/model/Transacao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/model/UserRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/model/TipoRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/resource/AuthResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/resource/AuthResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/resource/ClienteResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/resource/ClienteResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/resource/ContaResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/resource/ContaResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/resource/SaldoResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/resource/SaldoResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/resource/TransacaoResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/resource/TransacaoResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/service/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/katia/quarkus/apibancaria/service/TokenResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/import.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/import.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/privateKey.pem" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/privateKey.pem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/publicKey.pem" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/publicKey.pem" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;katiavk11-cmd&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/katiavk11-cmd/api-bancaria.git&quot;,
+    &quot;accountId&quot;: &quot;da4b4674-aa93-4b9d-9864-3c69460814d9&quot;
+  }
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="3Cr0xE8xaL3YmZ8iV2ur4y8vKBt" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.BcryptGenerator.executor&quot;: &quot;Run&quot;,
+    &quot;Application.HashGenerator.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/katia/IdeaProjects/estudo-quarkus/api-bancaria/api-bancaria/src/main/resources&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\katia\IdeaProjects\estudo-quarkus\api-bancaria\api-bancaria\src\main\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\katia\IdeaProjects\estudo-quarkus\api-bancaria\api-bancaria" />
+      <recent name="C:\Users\katia\IdeaProjects\estudo-quarkus\api-bancaria\api-bancaria\src\main\resources" />
+      <recent name="C:\Users\katia\IdeaProjects\estudo-quarkus\api-bancaria\api-bancaria\src\main\resources\keys" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="br.com.katia.quarkus.apibancaria.entity" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.HashGenerator">
+    <configuration name="BcryptGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BcryptGenerator" />
+      <module name="api-bancaria" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HashGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.katia.quarkus.apibancaria.resource.HashGenerator" />
+      <module name="api-bancaria" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.katia.quarkus.apibancaria.resource.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="api-bancaria" type="QuarkusRunConfiguration" factoryName="QuarkusRunConfiguration">
+      <module name="api-bancaria" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.HashGenerator" />
+        <item itemvalue="Application.BcryptGenerator" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2a0919c0-974b-4d19-b151-1121cdaf49dc" name="Changes" comment="" />
+      <created>1777128626411</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1777128626411</updated>
+    </task>
+    <servers />
+  </component>
+</project>

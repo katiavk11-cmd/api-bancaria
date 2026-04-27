@@ -1,55 +1,51 @@
 package br.com.katia.quarkus.apibancaria.resource;
 
-import br.com.katia.quarkus.apibancaria.model.Transacao;
-import br.com.katia.quarkus.apibancaria.model.Conta;
-import br.com.katia.quarkus.apibancaria.model.TipoConta;
-import br.com.katia.quarkus.apibancaria.model.TipoTransacao;
-import jakarta.annotation.security.PermitAll;
-import jakarta.annotation.security.RolesAllowed;
-import jakarta.transaction.Transactional;
+import br.com.katia.quarkus.apibancaria.dto.OperacaoDTO;
+import br.com.katia.quarkus.apibancaria.dto.TransferenciaDTO;
+import br.com.katia.quarkus.apibancaria.entity.Transacao;
+import br.com.katia.quarkus.apibancaria.service.TransacaoService;
+
+import jakarta.inject.Inject;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
-import jakarta.ws.rs.core.Response;
+
 import java.util.List;
 
 @Path("/transacoes")
-@Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
+@Produces(MediaType.APPLICATION_JSON)
 public class TransacaoResource {
 
-    @GET
-    @PermitAll
-    public List<Transacao> listar() {
-        return Transacao.listAll();
+    @Inject
+    TransacaoService service;
+
+    @POST
+    @Path("/depositos")
+    public String depositar(OperacaoDTO dto) {
+        service.depositar(dto.contaId(), dto.valor());
+        return "{\"msg\":\"Depósito realizado com sucesso\"}";
     }
 
     @POST
-    @Transactional
-    @PermitAll
-    public Response criar(Transacao transacao) {
-        if (transacao.tipo == TipoTransacao.SAQUE || transacao.tipo == TipoTransacao.DEPOSITO) {
-            Conta conta = transacao.tipo == TipoTransacao.SAQUE ?
-                    Conta.findById(transacao.contaOrigem.id) : Conta.findById(transacao.contaDestino.id);
+    @Path("/saques")
+    public String sacar(OperacaoDTO dto) {
+        service.sacar(dto.contaId(), dto.valor());
+        return "{\"msg\":\"Saque realizado com sucesso\"}";
+    }
 
-            if (conta == null) {
-                return Response.status(Response.Status.BAD_REQUEST)
-                        .entity("{\"error\": \"Conta não encontrada.\"}").build();
-            }
+    @POST
+    @Path("/transferencias")
+    public String transferir(TransferenciaDTO dto) {
+        service.transferir(dto.contaOrigemId(), dto.contaDestinoId(), dto.valor());
+        return "{\"msg\":\"Transferência realizada com sucesso\"}";
+    }
 
-            if (conta.tipo == TipoConta.ELETRONICA) {
-                return Response.status(Response.Status.BAD_REQUEST)
-                        .entity("{\"error\": \"Conta ELETRONICA só permite transferências.\"}").build();
-            }
-        }
-
-        if (transacao.tipo == TipoTransacao.TRANSFERENCIA) {
-            if (transacao.contaOrigem == null || transacao.contaDestino == null) {
-                return Response.status(Response.Status.BAD_REQUEST)
-                        .entity("{\"error\": \"Transferência exige conta de origem e destino.\"}").build();
-            }
-        }
-
-        transacao.persist();
-        return Response.status(Response.Status.CREATED).entity(transacao).build();
+    @GET
+    @Path("/extrato/{contaId}")
+    public List<Transacao> extrato(@PathParam("contaId") Long contaId) {
+        return Transacao.list(
+                "contaOrigemId = ?1 or contaDestinoId = ?1 order by dataHora desc",
+                contaId
+        );
     }
 }
